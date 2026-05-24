@@ -1,0 +1,123 @@
+# ===========================================================
+# Star Wars Watchlist — .gitignore
+# Public GitHub Pages repo. Kişisel/hassas hiçbir şey leak olmasın
+# diye geniş kapsamlı ignore listesi.
+# ===========================================================
+
+# ----- OS dosyaları -----
+# Windows
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.stackdump
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ----- Editor / IDE -----
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+.atom/
+*.iml
+nbproject/
+.history/
+.vs/
+
+# ----- AI asistan dosyaları (kişisel oturum / talimat / cache) -----
+# Claude
+.claude/
+CLAUDE.md
+.claude.json
+.claude-cache/
+
+# Cursor
+.cursor/
+.cursorrules
+.cursorignore
+
+# GitHub Copilot
+.copilot/
+.github/copilot-instructions.md
+copilot-instructions.md
+
+# Diğer AI araçları
+.windsurf/
+.codeium/
+.tabnine/
+.continue/
+.aider*
+.openhands/
+.ai/
+AGENTS.md
+GEMINI.md
+
+# ----- Geçici / yedek dosyalar -----
+*.bak
+*.backup
+*.tmp
+*.temp
+*.old
+*.orig
+*~$*
+
+# ----- Log dosyaları -----
+*.log
+logs/
+
+# ----- Kişisel notlar / yedekler -----
+# Watchlist localStorage export'ları, taslak notlar, kişisel dosyalar
+NOTES.md
+TODO.md
+PRIVATE.md
+SCRATCH.md
+notes/
+private/
+drafts/
+backup/
+*.dump
+watchlist-backup*.json
+localstorage-export*.json
+
+# ----- Çevre değişkenleri / secrets -----
+# TMDB API key localStorage'da tutuluyor, repo'ya girmemeli — ama yine de
+# her ihtimale karşı bu pattern'leri tamamen blokluyoruz:
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+secrets.json
+secrets.js
+credentials.json
+config.local.js
+config.private.js
+api-keys.txt
+tmdb-key.txt
+
+# ----- Node.js (ileride build adımı eklersen) -----
+node_modules/
+.npm/
+.yarn/
+.pnp.*
+.cache/
+dist/
+build/
